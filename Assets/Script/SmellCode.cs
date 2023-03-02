@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class SmellCode : MonoBehaviour
 {
+
+    public GameObject message;
+
     private float hp;
     
     // Start is called before the first frame update
@@ -26,7 +29,13 @@ public class SmellCode : MonoBehaviour
             hp = Mathf.Clamp(hp - Time.deltaTime,0,2);
         } else
         {
-            Debug.Log("Finito");
+            message.SetActive(true);
+            disappear();
         }
+    }
+
+    private void disappear()
+    {
+        gameObject.SetActive(false);
     }
 }

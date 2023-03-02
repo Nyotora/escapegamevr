@@ -28,7 +28,11 @@ public class HandledSpray : MonoBehaviour
             Collider[] hitColliders = Physics.OverlapBox(colliderPoint.gameObject.transform.position, new Vector3(0.1f, 0.1f, 0.65f), hand.gameObject.transform.rotation, m_LayerMask);
             if (hitColliders.Length > 0)
             {
-                Debug.Log(hitColliders[0]);
+                if (hitColliders[0].GetComponent<SmellCode>())
+                {
+                    hitColliders[0].GetComponent<SmellCode>().receiveSpray();
+                }
+                //Debug.Log(hitColliders[0]);
             }
         }
         else
