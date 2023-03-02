@@ -53,4 +53,16 @@ public class HandController : MonoBehaviour
 
 
     }
+
+    public bool isTriggerPressed(bool isRightController)
+    {
+        if (isRightController)
+        {
+            return Rcontroller.inputDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue) && triggerValue > 0.3f;
+        }
+        else
+        {
+            return Lcontroller.inputDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue) && triggerValue > 0.3f;
+        }
+    }
 }
