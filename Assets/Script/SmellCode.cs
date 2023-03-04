@@ -7,6 +7,7 @@ public class SmellCode : MonoBehaviour
 {
 
     public GameObject message;
+    public GameObject barre;
 
     private float hp;
     
@@ -30,6 +31,7 @@ public class SmellCode : MonoBehaviour
         } else
         {
             message.SetActive(true);
+            barre.SetActive(true);
             disappear();
         }
     }

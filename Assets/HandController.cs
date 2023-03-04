@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
-using static UnityEditor.Progress;
 
 public class HandController : MonoBehaviour
 {
